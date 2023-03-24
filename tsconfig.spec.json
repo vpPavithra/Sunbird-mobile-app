@@ -4,11 +4,15 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
-    ]
+      "node",
+      "reflect-metadata",
+      "jest"
+    ],
+    "resolveJsonModule": true
   },
   "files": [
     "src/test.ts",
+    "setup-jest.ts",
     "src/polyfills.ts"
   ],
   "include": [
