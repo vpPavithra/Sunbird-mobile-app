@@ -1,5 +1,9 @@
+#!/bin/bash
 
-NODE_OPTIONS=--max-old-space-size=4096 ionic cordova build android --prod --release --verbose --buildConfig ./buildConfig/build.json
+#Temporary Workaround to generate build as webpack was complaining of Heap Space
+#need to inspect on webpack dependdencies at the earliest
+
+NODE_OPTIONS=--max-old-space-size=6144 ionic cordova build android --prod --release --verbose --buildConfig ./buildConfig/build.json
 
 if [ -n "$angularConfiguration" ]; then
   echo "$angularConfiguration"
