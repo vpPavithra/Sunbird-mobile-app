@@ -77,10 +77,12 @@
               "node_modules/datatables.net-dt/css/jquery.dataTables.css",
               "node_modules/@project-sunbird/sb-themes/themes/themes-df.scss",
               {
-                "input": "src/global.scss"
+                "input": "src/global.scss",
+                "inject": true
               }
             ],
-            "scripts": ["node_modules/@project-sunbird/telemetry-sdk/index.js",
+            "scripts": [
+              "node_modules/@project-sunbird/telemetry-sdk/index.js",
               "node_modules/epubjs/dist/epub.js",
               "node_modules/katex/dist/katex.min.js",
               "node_modules/jquery/dist/jquery.min.js",
@@ -111,7 +113,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -119,7 +120,7 @@
               "buildOptimizer": true
             },
             "development": {
-              "buildOptimizer": false,
+              "buildOptimizer": true,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
